@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="../css/time.css">
+    <title>time</title>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 1920) {
+                        docEl.style.fontSize = '100px'; //1rem  = 100px
+                    } else {
+                        docEl.style.fontSize = 100 * (clientWidth / 1920) + 'px';
+                    }
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+
+<body style="visibility: hidden;">
+        <div class="box-center">
+            <div class="center-center">
+                <div class="weather-box">
+                    <div class="data">
+                        <p class="time" id="time">00:00:00</p>
+                        <p id="date"></p>
+                    </div>
+                    <div class="weather">
+                        <img id="weatherImg" src="../images/weather_img01.png" alt="">
+                        <div id="weather">
+                            <p class="active">多云</p>
+                            <p>16-22℃</p>
+                            <p>广州市从化区</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<script type="text/javascript" src="../bootstrap/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../bootstrap/js/base.js"></script>
+<script type="text/javascript">
+    $('document').ready(function () {
+        $("body").css('visibility', 'visible');
+        var localData = [$('#teacher').val(), $('#start').val() + '/' + $('#end').val(), $('#leader').val()]
+        localStorage.setItem("data", localData);
+    })
+</script>
+
+</html>

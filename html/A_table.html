@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>主页|排排坐</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/function.css">
+    <link rel="icon"  href="images/button/header.png">
+    <!--    <script type="text/javascript">-->
+    <!--        window.onload = function(){-->
+    <!--            var imgobject = document.getElementById("img");-->
+    <!--            imgobject.onclick = function(){-->
+    <!--                imgobject.src="chkservlet?"+Math.random();-->
+    <!--            }-->
+    <!--        }-->
+    <!--    </script>-->
+</head>
+<body data-spy="scroll" data-target="#pb-navbar" data-offset="200" >
+<div id="menuScroll">
+    <!--导航栏-->
+    <nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light" id="pb-navbar">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a class="navbar-brand" href="#section-home">排排坐奶茶</a>
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample09">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#section-portfolio">菜单</a></li>
+                    <li class="nav-item login"><a class="nav-link" href="#section-login">登录</a></li>
+                    <li class="nav-item money"><a class="nav-link" href="#section-money">我的账户</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#section-cart">购物车</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#section-about">关于我们</a></li>
+                </ul>
+            </div>
+            <div class="money_info new_overlay hide">
+                <div class="money_modal" >
+                    <p action=" " method="post">
+                        <div class="header"><p><h3 style="display: inline">我的账户</h3>￥高级会员</p></div>
+                <p class="close"></p>
+                <p><label>卡&nbsp&nbsp&nbsp&nbsp号:</label>
+                    <input type="text" name="userName" class="userName" value="123456" disabled>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <label>昵&nbsp&nbsp&nbsp&nbsp称:</label>
+                    <input type="text" name="userSex" value="排排" disabled >
+                </p>
+                <p><label>电&nbsp&nbsp&nbsp&nbsp话:</label>
+                    <input type="text" name="userTelephone" class="userTelephone" value="134xxxx3971" disabled>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <label>性&nbsp&nbsp&nbsp&nbsp别:</label>
+                    <input type="text" name="userSex" value="女" disabled >
+                </p>
+                <p>总消费:
+                    <input type="text" name="num" value="99.99元" disabled >
+                </p>
+                <p>当前会员级别可享受8折优惠</p>
+                </from>
+            </div>
+        </div>
+        <div class="login_info new_overlay hide">
+            <div class="login-modal ">
+                <ul class="tag-list">
+                    <li class="tag lg_active" data-id="#id-li-tag-content-1">登录</li>
+                    <li class="tag" data-id="#id-li-tag-content-2">注册</li>
+                </ul>
+                <div class="tag-content-list">
+                    <ul class="tag-content show" id="id-li-tag-content-1">
+                        <form action=" " method="post">
+                            <p class="close"></p>
+                            <p><label>账 号:</label>
+                                <input type="text" name="login" id="login" placeholder="请输入账号">
+                            </p>
+                            <p><label>密 码:</label>
+                                <input type="text" name="password" id="password" placeholder="请输入密码">
+                            </p>
+                            <p><label>验证码:</label>
+                                <input type="text" name="chk" id="checkCode" placeholder="输入验证码">
+                                <img src="chkservlet" id="img">
+                            </p>
+                            <p class="prompt">登录失败</p>
+                            <input type="submit" class="login-button" value="登录">
+                        </form>
+                    </ul>
+                    <ul class="tag-content" id="id-li-tag-content-2">
+                        <form action=" " method="post">
+                            <p class="close"></p>
+                            <p><label>账 号:</label>
+                                <input type="text" name="name" class="name" placeholder="请输入账号">
+                            </p>
+                            <p><label>密 码:</label>
+                                <input type="text" name="password" class="password" placeholder="请输入密码(6-8位)">
+                            </p>
+                            <p><label>电 话:</label>
+                                <input type="text" name="telephone" class="telephone" placeholder="请输入联系电话">
+                            </p>
+                            <p><label>性 别:</label>
+                                <label><input type="radio" name="sex" value="男生">男生</label>
+                                <label><input type="radio" name="sex" value="女生">女生</label>
+                            </p>
+                            <p class="prompt">注册成功</p>
+                            <input type="submit" name="login-button" class="login-button" value="注册">
+                        </form>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--首页-->
+    <section class="site-hero" id="section-home" >
+        <div class="container">
+            <div class="row intro-text align-items-center justify-content-center">
+                <div class="col-md-10 text-center">
+                    <p>&nbsp</p><p>&nbsp</p> <p>&nbsp</p><p>&nbsp</p>
+                    <h1 class="site-heading site-animate" ><strong>排排坐奶茶店</strong></h1>
+                    <p class="lead site-subheading mb-4 site-animate">小时候的味道</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!--菜单-->
+<section class="site-section" id="section-portfolio">
+    <div class="container" style="width: 100%; height: 535px">
+        <div class="row">
+            <div class="section-heading text-left col-md-12">
+                <h2>排排菜单-经典热销<a class="cat" href="html/menu.html">查看更多＋</a></h2>
+            </div>
+        </div>
+        <div class="filters">
+            <ul>
+                <li class="active" data-filter="*">经典热销</li>
+                <li data-filter=".typography">醇香奶茶</li>
+                <li data-filter=".packaging">原沏茗作</li>
+                <li data-filter=".mockup">鲜果茶级</li>
+                <li data-filter=".photography">现磨咖啡</li>
+            </ul>
+        </div>
+        <div class="filters-content">
+            <div class="row grid">
+                <div class="single-portfolio col-sm-4 all typography">
+                    <div class="relative">
+                        <div class="thumb">
+                            <div class="overlay overlay-bg"></div>
+                            <img class="image img-fluid" src="images/menu/Milk_tea4.PNG" alt="">
+                        </div>
+                        <div class="p-inner">
+                            <h4>原味奶茶</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-portfolio col-sm-4 all photography">
+                    <div class="relative">
+                        <div class="thumb">
+                            <div class="overlay overlay-bg"></div>
+                            <img class="image img-fluid" src="images/menu/coffee3.PNG" alt="咖啡">
+                        </div>
+                        <div class="p-inner">
+                            <h4>摩卡</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-portfolio col-sm-4 all photography">
+                    <div class="relative">
+                        <div class="thumb">
+                            <div class="overlay overlay-bg"></div>
+                            <img class="image img-fluid" src="images/menu/coffee1.PNG" alt="咖啡">
+                        </div>
+                        <div class="p-inner">
+                            <h4>美式</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="single-portfolio col-sm-4 all packaging">
+                    <div class="relative">
+                        <div class="thumb">
+                            <div class="overlay overlay-bg"></div>
+                            <img class="image img-fluid" src="images/menu/tea2.png" alt="橘香柚柚花草茶">
+                        </div>
+                    </div>
+                    <div class="p-inner">
+                        <h4>橘香柚柚花草茶</h4>
+                    </div>
+                </div>
+                <div class="single-portfolio col-sm-4 all mockup">
+                    <div class="relative">
+                        <div class="thumb">
+                            <div class="overlay overlay-bg"></div>
+                            <img class="image img-fluid" src="images/menu/fruits1.PNG" alt="">
+                        </div>
+                        <div class="p-inner">
+                            <h4>桃之夭夭</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-portfolio col-sm-4 all mockup">
+                    <div class="relative">
+                        <div class="thumb">
+                            <div class="overlay overlay-bg"></div>
+                            <img class="image img-fluid" src="images/menu/fruits2.PNG" alt="">
+                        </div>
+                        <div class="p-inner">
+                            <h4>橙柚派对</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--关于我们-->
+<section class="site-section" id="section-about">
+    <div class="container">
+        <div class="row mb-5 align-items-center">
+            <div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">
+                <img src="images/about.PNG" alt="Image placeholder" class="img-fluid">
+            </div>
+            <div class="col-lg-5 pl-lg-5">
+                <div class="section-heading">
+                    <h2>关于我们</h2>
+                </div>
+                <p class="mb-5  ">加入我们的大家庭，和我们一起工作，让我们与你一起成长，创造无限可能。在这里工作意味着一个获得超越简单雇佣关系的机会，成为我们的伙伴。我们在这里和你一起成长，成为一个更好的人，实现更大的目标，在你面前的正是无限可能。你可以在这里实现更多、成就更多，并且成为最好的自己。就在这里认同自己的价值然后去发现一个更大更有意义的世界。
+                </p>
+                <p>
+                    <a href="#section-contact" class="btn btn-primary px-4 py-2 btn-sm smoothscroll">加入我们</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row mb-3">
+            <p class="col-12 text-center">
+                Copyright @2020.Team 排排坐小队
+            </p>
+        </div>
+    </div>
+</footer>
+<script src="js/fun.js"></script>
+<script src="js/vendor/jquery.min.js"></script>
+<script src="js/vendor/popper.min.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/vendor/jquery.easing.1.3.js"></script>
+<script src="js/vendor/jquery.stellar.min.js"></script>
+<script src="js/vendor/jquery.waypoints.min.js"></script>
+
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>

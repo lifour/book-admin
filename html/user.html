@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>use|Admin</title>
+    <link rel="icon"  href="../images/logo_head.png">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../bootstrap/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/local.css" />
+
+    <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/fun.js"></script>
+</head>
+<body id="aclter">
+<div id="wrapper">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!--切换导航-->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">PaiPaiZuo Admin Panel</a>
+        </div>
+        <!--导航栏-->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <!--左侧导航栏 -->
+            <ul class="nav navbar-nav side-nav">
+                <li class="dropdown user-dropdown ">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-bullseye"></i>  我的桌面
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html">数据统计</a></li>
+                        <li class="divider"></li>
+                        <li><a href="demo.html">功能模块介绍</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown user-dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-list-ol"></i> 产品管理
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="products.html">产品信息</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">产品回收站</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown user-dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-shopping-cart"></i> 订单管理
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="order.html">订单信息</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">订单回收站</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown user-dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-user-circle-o"></i> 会员管理
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="user.html">会员信息</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">信息回收站</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown user-dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-user"></i > 管理员管理
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="adminUser.html">管理员信息</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">信息回收站</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!--顶部导航栏 -->
+            <ul class="nav navbar-nav navbar-right navbar-user">
+                <li class="dropdown messages-dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> Messages <span class="badge">2</span> <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-header">2 新消息   </li>
+                        <li class="message-preview">
+                            <a href="#">
+                                <span class="avatar"><i class="fa fa-bell"></i></span>
+                                <span class="message">温馨提示</span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="message-preview">
+                            <a href="#">
+                                <span class="avatar"><i class="fa fa-bell"></i></span>
+                                <span class="message">安全警报</span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="#">转到收件箱 <span class="badge">2</span></a></li>
+                    </ul>
+                </li>
+                <li class="dropdown user-dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-user">  admin</i >
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../login.html"><i class="fa fa-gear"></i> 切换账号</a></li>
+                        <li class="divider"></li>
+                        <li><a href="../login.html"><i class="fa fa-power-off"></i> 退出</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="web前端/index.html" class="fa fa-home">前端界面</a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="navbar-bottom"></div>
+    </nav>
+
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>会员管理 <small>Member management</small></h1>
+                <div class="alert alert-success alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    Warm Tip: This interface can modify member information, collect information and adjust sales strategies<br />
+                    温馨提示：此界面可以对会员信息进行增删查改，便于收集用户，调整对应销售策略。<br />
+                </div>
+            </div>
+        </div>
+        <!--表格信息 -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <i class="fa fa-user-circle-o">   会员信息</i ></h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table class="table" >
+                                <tbody id="list">
+                                <tr >
+                                    <th colspan="9">会员信息</th>
+                                    <input type="text " placeholder="请输入账号" class="input form-control1" id="zhanghao">
+                                    <input type="text " placeholder="请输入姓名" class="input form-control1" id="username">
+                                    <input type="text " placeholder="请输入密码" class="input form-control1" id="password">
+                                    <br/>
+                                    <input type="text " placeholder="请输入电话" class="input form-control1" id="call">
+                                    <input type="text " list="itemlist_sex" placeholder="请选择性别" class="input form-control1" id="sex">
+                                    <datalist id="itemlist_sex">
+                                        <option>男</option>
+                                        <option>女</option>
+                                    </datalist>
+
+                                    <input type="text " list='itemlist_level' placeholder="请选择会员级别" class="input form-control1" id="level">
+                                    <datalist id="itemlist_level">
+                                        <option>普通会员</option>
+                                        <option>高级会员</option>
+                                        <option>至尊会员</option>
+                                    </datalist>
+                                    <br/>
+                                    <input type="text " placeholder="总消费金额" class="input form-control1" id="money">
+                                    <button type="button" onclick="func2()" class="btn btn-default">添加</button>
+                                    <button type="button" onclick="func()" class="btn btn-default">删除</button>
+                                    <br>
+                                </tr>
+                                <tr >
+                                    <th><input type="checkbox"  id="checkall">全选<br></th>
+                                    <th>序号</th>
+                                    <th>账号</th>
+                                    <th>姓名</th>
+                                    <th>密码</th>
+                                    <th>性别</th>
+                                    <th>电话</th>
+                                    <th>会员级别</th>
+                                    <th>消费金额</th>
+                                </tr>
+                                <tr class="active">
+                                    <td ><input type="checkbox" name="info" value="1" class="list-group-item"></td>
+                                    <td >1</td>
+                                    <td >20200410</td>
+                                    <td >小明</td>
+                                    <td >123456</td>
+                                    <td >男</td>
+                                    <td width="8%">136XXXX7807</td>
+                                    <td>普通会员</td>
+                                    <td>012.12元</td>
+                                </tr>
+                                <tr class="active">
+                                    <td ><input type="checkbox" name="info" value="2" class="list-group-item"></td>
+                                    <td >2</td>
+                                    <td >20200416</td>
+                                    <td >小红</td>
+                                    <td >235743</td>
+                                    <td >女</td>
+                                    <td width="8%">135XXXX6567</td>
+                                    <td>高级会员</td>
+                                    <td>283.12元</td>
+                                </tr>
+                                <tr class="active">
+                                    <td ><input type="checkbox" name="info" value="2" class="list-group-item"></td>
+                                    <td >3</td>
+                                    <td >20200417</td>
+                                    <td >小张</td>
+                                    <td >134624</td>
+                                    <td >女</td>
+                                    <td width="8%">189XXXX7807</td>
+                                    <td>普通会员</td>
+                                    <td>033.17元</td>
+                                </tr>
+                                <tr class="active">
+                                    <td ><input type="checkbox" name="info" value="2" class="list-group-item"></td>
+                                    <td >4</td>
+                                    <td >20200501</td>
+                                    <td >小钱</td>
+                                    <td >643757</td>
+                                    <td >女</td>
+                                    <td width="8%">136XXXX7807</td>
+                                    <td>普通会员</td>
+                                    <td>060.23元</td>
+                                </tr>
+                                <tr class="active">
+                                    <td ><input type="checkbox" name="info" value="2" class="list-group-item"></td>
+                                    <td >5</td>
+                                    <td >20200521</td>
+                                    <td >小王</td>
+                                    <td >123536</td>
+                                    <td >男</td>
+                                    <td width="8%">136XXXX3462</td>
+                                    <td>至尊会员</td>
+                                    <td>520.11元</td>
+                                </tr>
+                                <tr class="active">
+                                    <td ><input type="checkbox" name="info" value="2" class="list-group-item"></td>
+                                    <td >6</td>
+                                    <td >20200529</td>
+                                    <td >小李</td>
+                                    <td >192748</td>
+                                    <td >女</td>
+                                    <td width="8%">182XXXX2572</td>
+                                    <td>普通会员</td>
+                                    <td>011.11元</td>
+                                </tr>
+                                </tbody>
+                                <tr  class="sc">
+                                    <th colspan="8">当前页数：1</th>
+                                    <td> <input type="submit" onclick="func3()" value="批量删除" class="sc"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!--分页 -->
+                        <div style="text-align: center;">
+                            <div style="text-align: center;">
+                                <ul class="pagination">
+                                    <li class="disabled"><a href="#" aria-label="Previous">&laquo;</a></li>
+                                    <li class="li-tag active"><a href="#">1</a></li>
+                                    <li class="li-tag "><a href="#">2</a></li>
+                                    <li class="li-tag "><a href="#">3</a></li>
+                                    <li class="li-tag "><a href="#" aria-label="Next">&raquo;</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 分页结束 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--页尾 -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row mb-3">
+                <p class="footer-font">
+                    Copyright @2020.Team 排排坐小队
+                </p>
+            </div>
+        </div>
+    </footer>
+</div>
+    <!--全选控制-->
+<script type="text/javascript">
+    window.onload = function(){
+        var chkall = document.getElementById("checkall");
+        var infos = document.getElementsByName("info");
+
+        chkall.onclick = function(){
+            /* alert("a");  */
+            if(chkall.checked){
+                /* alert("b");  */
+                for(var i=0; i<infos.length; i++){
+                    if(!infos[i].checked){
+                        infos[i].checked = true;
+                    }
+                }
+            } else {
+                for(var i=0; i<infos.length; i++){
+                    if(infos[i].checked){
+                        infos[i].checked = false;
+                    }
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

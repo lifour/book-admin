@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap-Table</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap-table.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<body>
+<div>
+    <div>
+        <div class="col-*-12">
+            <div id="id-div-container"></div>
+            <table id="mytab" class="table table-hover"></table>
+
+            <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">添加图书</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form role="form" action="javascript:void(0)">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="bookname" placeholder="请输入书籍名称">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="bookarea" placeholder="请输入书籍出版国家">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="bookauthor" placeholder="请输入书籍作者">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="bookprice" placeholder="请输入书籍价格">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-primary" id="addRecord">提交</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="../bootstrap/js/bootstrap-table.js"></script>
+<script src="../bootstrap/js/bootstrap-table-zh-CN.js"></script>
+<script type="text/javascript">
+    $('#mytab').bootstrapTable({
+        method: 'POST',
+        url: "../dates/book.json",//请求路径
+        striped: true, //是否显示行间隔色
+        pageNumber: 1, //初始化加载第一页
+        pagination: true,//是否分页
+        sidePagination: 'client',//server:服务器端分页|client：前端分页
+        pageSize: 5,//单页记录数
+        pageList: [5, 10, 20, 30],//可选择单页记录数
+        showRefresh: true,//刷新按钮
+        columns: [{
+            title: '序号',
+            field: 'ranking',
+            sortable: true
+        },{
+            title: '书名',
+            field: 'name',
+            sortable: true
+        }, {
+            title: '作者',
+            field: 'author',
+            sortable: true
+        }, {
+            title: '分数',
+            field: 'score',
+            sortable: true
+        }, {
+            title: '价格',
+            field: 'price',
+            sortable: true
+        }, {
+            title: '出版时间',
+            field: 'year',
+            sortable: true
+        }, {
+            title: '操作    <a data-toggle="modal" data-target="#addModal">添加图书</a>',
+            field: 'publicationTime',
+            formatter: operation,//对资源进行操作
+        }],
+    });
+
+    function operation(value, row, index) {
+        var htm = "<a href='/delete_one?bookName=" + row["ranking"] + "'>删除</a> " +
+            "<a href='/modify_one.xhtml?bookName=" + row["ranking"] + "'>修改</a>"
+        return htm;
+    }
+        $("#mytab").bootstrapTable('removeAll');
+        for (i = 0; i < data_obj.length; i++) {
+            var _data = {
+                "ranking": data_obj[i]["ranking"],
+                "name": data_obj[i]["name"],
+                "author": data_obj[i]["author"],
+                "price": data_obj[i]["price"],
+                "publicationTime": data_obj[i]["publicationTime"],
+            }
+            $("#mytab").bootstrapTable('append', _data);
+    }
+
+</script>
+</body>
+</html>

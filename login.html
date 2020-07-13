@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="icon"  href="images/logo_head.png">
+
+    <title>login</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/font-awesome/css/font-awesome.min.css" />
+    <link href="css/signin.css" rel="stylesheet">
+  </head>
+  <body>
+  <div class="login-form">
+      <form class="container">
+          <div class="form-signin" name="formsignin">
+              <div class="form-header">
+                  <h2 class="form-signin-heading">
+<!--                      Admin Login-->
+                      <label class="tix" id="tix">登录成功</label>
+                  </h2>
+              </div>
+              <div class="form-div">
+                  <i class="fa fa-envelope-o">&nbsp;</i>
+                  <input type="email" name="inputEmail" class="form-control inputEmail" id="inputEmail" placeholder="邮箱" required autofocus>
+              </div>
+              <div class="form-div">
+                  <i class="lock fa fa-lock " style="margin:3px">&nbsp;</i>
+                  <input type="password" name="inputPassword" class="form-control inputPassword" id="inputPassword" placeholder="密码" required>
+              </div>
+              <div class="checkbox checksrd">
+                  <input type="checkbox" name="sayPassword" class="sayPassword"> 显示密码&nbsp;
+                  <input type="checkbox" name="rememberMe" id="rememberMe"> 记住用户&nbsp;
+                  <input type="checkbox" id="del">清空
+              </div>
+              <button class="form-btn formCart" id="login-btn" type="submit">登&nbsp;录</button>
+          </div>
+      </form> <!-- /container -->
+  </div>
+
+  </body>
+  <script type="text/javascript" src="js/login.js"></script>
+</html>

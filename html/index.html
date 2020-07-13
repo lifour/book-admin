@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index|Admin</title>
+
+    <link rel="icon"  href="../images/logo_head.png">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../bootstrap/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/local.css" />
+
+    <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div id="wrapper">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!--切换导航-->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">PaiPaiZuo Admin Panel</a>
+        </div>
+        <!--导航栏-->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <!--左侧导航栏 -->
+            <ul class="nav navbar-nav side-nav">
+                <li class="dropdown user-dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-bullseye"></i>  我的桌面
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html">数据统计</a></li>
+                        <li class="divider"></li>
+                        <li><a href="demo.html">功能模块介绍</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown user-dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-list-ol"></i> 产品管理
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="products.html">产品信息</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">产品回收站</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown user-dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-shopping-cart"></i> 订单管理
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="order.html">订单信息</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">订单回收站</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown user-dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-user-circle-o"></i> 会员管理
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="user.html">会员信息</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">信息回收站</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown user-dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-user"></i > 管理员管理
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="adminUser.html">管理员信息</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">信息回收站</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!--顶部导航栏 -->
+            <ul class="nav navbar-nav navbar-right navbar-user">
+                <li class="dropdown messages-dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> Messages <span class="badge">2</span> <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-header">2 新消息   </li>
+                        <li class="message-preview">
+                            <a href="#">
+                                <span class="avatar"><i class="fa fa-bell"></i></span>
+                                <span class="message">温馨提示</span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="message-preview">
+                            <a href="#">
+                                <span class="avatar"><i class="fa fa-bell"></i></span>
+                                <span class="message">安全警报</span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="#">转到收件箱 <span class="badge">2</span></a></li>
+                    </ul>
+                </li>
+                <li class="dropdown user-dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-user">  admin</i >
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../login.html"><i class="fa fa-gear"></i> 切换账号</a></li>
+                        <li class="divider"></li>
+                        <li><a href="../login.html"><i class="fa fa-power-off"></i> 退出</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="web前端/index.html" class="fa fa-home">前端界面</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-bottom"></div>
+    </nav>
+
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>数据统计 <small>首页</small></h1>
+                <blockquote class="layui-elem-quote">
+                    Welcome to paizuo background management system<br/>
+                    <font size="3px">欢迎来到排排坐后台管理系统</font>
+                </blockquote>
+                <div class="alert alert-success alert-dismissable">
+                    <div style="position:absolute;display: flex; right: 80px; z-index: 10;width: 1300px;">
+                    <iframe frameborder="0" src="time.html" class="x-iframe"></iframe>
+                    </div>
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    登录次数：19<br/>
+                    上次登录IP：222.35.131.79.1<br/>
+                    上次登录时间： 2020-5-29 21:19:55
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <i class="fa fa-bar-chart-o"></i>服务器信息</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <th width="30%">服务器计算机名</th>
+                                <td><span id="lbServerName">http://127.0.0.1/</span></td>
+                            </tr>
+                            <tr>
+                                <td>服务器IP地址</td>
+                                <td>192.168.1.1</td>
+                            </tr>
+                            <tr>
+                                <td>服务器域名</td>
+                                <td>x.xuebingsi.com</td>
+                            </tr>
+                            <tr>
+                                <td>服务器端口 </td>
+                                <td>80</td>
+                            </tr>
+                            <tr>
+                                <td>服务器IIS版本 </td>
+                                <td>Microsoft-IIS/6.0</td>
+                            </tr>
+                            <tr>
+                                <td>本文件所在文件夹 </td>
+                                <td>D:\WebSite\HanXiPuTai.com\XinYiCMS.Web\</td>
+                            </tr>
+                            <tr>
+                                <td>服务器操作系统 </td>
+                                <td>Microsoft Windows NT 5.2.3790 Service Pack 2</td>
+                            </tr>
+                            <tr>
+                                <td>系统所在文件夹 </td>
+                                <td>C:\WINDOWS\system32</td>
+                            </tr>
+                            <tr>
+                                <td>服务器脚本超时时间 </td>
+                                <td>30000秒</td>
+                            </tr>
+                            <tr>
+                                <td>服务器的语言种类 </td>
+                                <td>Chinese (People's Republic of China)</td>
+                            </tr>
+                            <tr>
+                                <td>.NET Framework 版本 </td>
+                                <td>2.050727.3655</td>
+                            </tr>
+                            <tr>
+                                <td>服务器当前时间 </td>
+                                <td>2017-01-01 12:06:23</td>
+                            </tr>
+                            <tr>
+                                <td>服务器IE版本 </td>
+                                <td>6.0000</td>
+                            </tr>
+                            <tr>
+                                <td>服务器上次启动到现在已运行 </td>
+                                <td>7210分钟</td>
+                            </tr>
+                            <tr>
+                                <td>逻辑驱动器 </td>
+                                <td>C:\D:\</td>
+                            </tr>
+                            <tr>
+                                <td>CPU 总数 </td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>CPU 类型 </td>
+                                <td>x86 Family 6 Model 42 Stepping 1, GenuineIntel</td>
+                            </tr>
+                            <tr>
+                                <td>虚拟内存 </td>
+                                <td>52480M</td>
+                            </tr>
+                            <tr>
+                                <td>当前程序占用内存 </td>
+                                <td>3.29M</td>
+                            </tr>
+                            <tr>
+                                <td>Asp.net所占内存 </td>
+                                <td>51.46M</td>
+                            </tr>
+                            <tr>
+                                <td>当前Session数量 </td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>当前SessionID </td>
+                                <td>gznhpwmp34004345jz2q3l45</td>
+                            </tr>
+                            <tr>
+                                <td>当前系统用户名 </td>
+                                <td>NETWORK SERVICE</td>
+                            </tr>
+                            </tbody>
+                        </table>
+<!--                        <div id="shieldui-grid1"></div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!--页尾 -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row mb-3">
+                    <p class="footer-font">
+                        Copyright @2020.Team 排排坐小队
+                    </p>
+                </div>
+            </div>
+        </footer>
+</div>
+<!-- /#wrapper -->
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
